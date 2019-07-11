@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = "http://api-books-app.herokuapp.com/api";
+const baseUrl = "https://api-books-app.herokuapp.com/api";
 
 export const fetchAllBooks = () => {
   return axios.get(`${baseUrl}/v1/books`);
