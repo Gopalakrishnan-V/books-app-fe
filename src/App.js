@@ -1,25 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import HomeScreen from "./screens/HomeScreen";
+import NewBookScreen from "./screens/NewBookScreen";
+import EditBookScreen from "./screens/EditBookScreen";
+import BookDetailsScreen from "./screens/BookDetailsScreen";
+import AppHeader from "./components/AppHeader";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <AppHeader />
+      <Switch>
+        <Route exact path="/" component={HomeScreen} />
+        <Route exact path="/new-book" component={NewBookScreen} />
+        <Route exact path="/edit-book/:id" component={EditBookScreen} />
+        <Route exact path="/books/:id" component={BookDetailsScreen} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
