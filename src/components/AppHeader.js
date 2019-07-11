@@ -7,6 +7,10 @@ export class AppHeader extends Component {
     this.props.history.push("/new-book");
   };
 
+  handleTitleClick = () => {
+    this.props.history.push("/");
+  };
+
   render() {
     const { pathname } = this.props.location;
     let showCreateButton = true;
@@ -26,7 +30,11 @@ export class AppHeader extends Component {
           paddingRight: 10
         }}
       >
-        <div className="row" style={{ alignItems: "center" }}>
+        <div
+          className="row"
+          style={{ alignItems: "center", cursor: "pointer" }}
+          onClick={this.handleTitleClick}
+        >
           <img
             src={
               "http://icons.iconarchive.com/icons/ampeross/smooth/512/Apple-Books-icon.png"
