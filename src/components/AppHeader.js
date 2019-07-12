@@ -37,7 +37,7 @@ export class AppHeader extends Component {
         >
           <img
             src={
-              "http://icons.iconarchive.com/icons/ampeross/smooth/512/Apple-Books-icon.png"
+              "https://i.ibb.co/my8YVFC/Apple-Books-icon.png"
             }
             style={{ height: 40 }}
             alt=""
